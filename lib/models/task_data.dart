@@ -42,4 +42,8 @@ class TaskData extends ChangeNotifier{
     notifyListeners();
   }
 
+  void reorderTask(int oldIndex, int newIndex){
+    _tasks.insert(newIndex, _tasks.removeAt(oldIndex));
+  }
+
 }
